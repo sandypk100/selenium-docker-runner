@@ -20,7 +20,7 @@ services:
       - HUB_HOST=hub
       
   login-module:
-    image: sandocker/containertest3:googletest
+    image: selenium-docker-test-maven:latest
     depends_on:
       - chrome
       - firefox
@@ -32,7 +32,7 @@ services:
       - /home/user/test_result_chrome:/usr/share/udemy/test-output
 
   search-module:
-    image: sandocker/containertest3:googletest
+    image: selenium-docker-test-maven:latest
     depends_on:
       - chrome
       - firefox
