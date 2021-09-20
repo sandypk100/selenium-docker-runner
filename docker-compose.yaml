@@ -27,7 +27,7 @@ services:
     environment:
       - MODULE=testng.xml
       - BROWSER=chrome
-      - HUB_HOST=165.232.135.90
+      - HUB_HOST=143.244.176.53
     volumes:
       - /home/user/test_result_chrome:/usr/share/udemy/test-output
 
@@ -39,6 +39,6 @@ services:
     environment:
       - MODULE=testng.xml
       - BROWSER=firefox
-      - HUB_HOST=165.232.135.90
+      - HUB_HOST=143.244.176.53
     volumes:
       - /home/user/test_result_firefox:/usr/share/udemy/test-output
