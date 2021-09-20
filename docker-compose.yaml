@@ -18,3 +18,27 @@ services:
       - hub
     environment:
       - HUB_HOST=hub
+      
+  login-module:
+    image: sandocker/containertest3:googletest
+    depends_on:
+      - chrome
+      - firefox
+    environment:
+      - MODULE=testng.xml
+      - BROWSER=chrome
+      - HUB_HOST=165.232.135.90
+    volumes:
+      - /home/user/test_result_chrome:/usr/share/udemy/test-output
+
+  search-module:
+    image: sandocker/containertest3:googletest
+    depends_on:
+      - chrome
+      - firefox
+    environment:
+      - MODULE=testng.xml
+      - BROWSER=firefox
+      - HUB_HOST=165.232.135.90
+    volumes:
+      - /home/user/test_result_firefox:/usr/share/udemy/test-output
