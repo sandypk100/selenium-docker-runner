@@ -16,5 +16,12 @@ pipeline{
               sh "docker-compose down"
                }
           } 
-  }
+      }
+   post{
+      always{
+         archiveArtifacts artifacts: '/home/user/**'  
+         
+      }
+      
+   }
 }
