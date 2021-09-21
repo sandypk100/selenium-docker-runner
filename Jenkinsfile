@@ -19,7 +19,7 @@ pipeline{
       }
    post{
       always{
-         archiveArtifacts artifacts: 'test-output/**'
+         archiveArtifacts artifacts: '/home/user/test_result_chrome/**'
          sh "docker-compose down"
       }
       
