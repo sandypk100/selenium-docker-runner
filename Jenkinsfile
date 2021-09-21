@@ -11,16 +11,16 @@ pipeline{
               sh "docker-compose up login-module search-module"
                }
           }  
-      stage("Bring grid down"){    
-          steps{
-              sh "docker-compose down"
-               }
-          } 
+      //stage("Bring grid down"){    
+        //  steps{
+         //     sh "docker-compose down"
+           //    }
+          //} 
       }
    post{
       always{
-         archiveArtifacts artifacts: '/home/user/**'  
-         
+         archiveArtifacts artifacts: '/home/user/**'
+         sh "docker-compose down"
       }
       
    }
