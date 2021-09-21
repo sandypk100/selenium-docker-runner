@@ -29,7 +29,7 @@ services:
       - BROWSER=chrome
       - HUB_HOST=143.244.176.53
     volumes:
-      - /home/user/test_result_chrome:/usr/share/udemy/test-output
+      - ./output/test_result_chrome:/usr/share/udemy/test-output
 
   search-module:
     image: sandocker100/selenium-test-maven
@@ -41,4 +41,4 @@ services:
       - BROWSER=firefox
       - HUB_HOST=143.244.176.53
     volumes:
-      - /home/user/test_result_firefox:/usr/share/udemy/test-output
+      - ./output/test_result_firefox:/usr/share/udemy/test-output
