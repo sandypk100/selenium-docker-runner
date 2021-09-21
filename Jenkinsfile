@@ -19,7 +19,7 @@ pipeline{
       }
    post{
       always{
-         archiveArtifacts artifacts: 'user/**'
+         archiveArtifacts artifacts: 'test-output/**'
          sh "docker-compose down"
       }
       
