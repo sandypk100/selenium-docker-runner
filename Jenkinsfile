@@ -1,11 +1,7 @@
 pipeline{ 
    agent any
    stages{
-      stage("Pull latest Image"){    
-          steps{
-              sh "docker pull sandocker100/python-selenium-test-maven:latest"
-               }
-          }  
+      
       stage("Start Selenium Grid"){    
           steps{
               sh "docker-compose up -d hub chrome firefox"
